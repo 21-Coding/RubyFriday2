@@ -26,7 +26,7 @@ describe '#Word' do
     it("finds word within the list.") do
       word = Word.new("Share", nil)
       word.save()
-      expect(Word.find_word(word.id)).to(eq([word]))
+      expect(Word.find_word(word.id)).to(eq(word))
     end
   end
 
