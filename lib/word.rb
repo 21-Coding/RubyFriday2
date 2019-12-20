@@ -1,5 +1,5 @@
 class Word
-  attr_accessor :word, :id
+  attr_accessor :words, :id
   @@words = {}
   @@total_rows = 0
 
@@ -18,7 +18,7 @@ class Word
 
   end
   def save
-
+    @@words[self.id] = Word.new(self.words, self.id)
   end
 
   def update

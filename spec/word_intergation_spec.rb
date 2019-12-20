@@ -21,6 +21,15 @@ describe '#Word' do
       expect(Word.all).to(eq([]))
     end
   end
+  # 
+  # describe('') do
+  #   it("clears all words from list") do
+  #     word = Word.new("Share", nil)
+  #     word.save()
+  #     Word.clear()
+  #     expect(Word.all).to(eq([]))
+  #   end
+  # end
 
 
 end
