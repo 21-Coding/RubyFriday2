@@ -21,9 +21,9 @@ class Word
     @@words[self.id] = Word.new(self.words, self.id)
   end
 
-  def find_word(id)
+  def self.find_word(id)
     @@words[id]
-    
+
   end
   def update
 
