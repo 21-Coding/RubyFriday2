@@ -23,7 +23,7 @@ describe '#Word' do
   end
 
   describe('.find_word') do
-    it("finds word within the list.") do
+    it("finds a word within the list.") do
       word = Word.new("Share", nil)
       word.save()
       expect(Word.find_word(word.id)).to(eq(word))

@@ -2,7 +2,7 @@ class Word
   attr_accessor :words, :id
   @@words = {}
   @@total_rows = 0
-
+  
   def initialize(input, id)
   @input = input
   @id = id
