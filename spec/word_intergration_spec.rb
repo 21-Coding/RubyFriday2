@@ -13,6 +13,16 @@ describe '#Word' do
     end
   end
 
+  describe('#==') do
+    it "is the same word if attributes are matching another word" do
+      word = Word.new("Share", nil)
+      word2 = Word.new("Hello", nil)
+      expect(word).to(eq(word2))
+    end
+  end
+
+
+
   describe('.clear') do
     it("clears all words from list.") do
       word = Word.new("Share", nil)
