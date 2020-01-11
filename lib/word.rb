@@ -21,8 +21,7 @@ class Word
     @@words.values()
 
   end
-
-
+#
   def save
     @@words[self.id] = Word.new(self.word, self.id)
   end
