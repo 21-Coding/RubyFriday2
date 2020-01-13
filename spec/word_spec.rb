@@ -59,6 +59,15 @@ describe '#Word' do
     end
   end
 
+  describe('.update') do
+    it "updates a word by id" do
+      word = Word.new("Share", nil)
+      word.save()
+      word.update("Hello")
+      expect(word.word).to(eq([word]))
+    end
+  end
+
 
 
 
