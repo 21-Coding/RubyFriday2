@@ -33,17 +33,35 @@ class Word
   end
 
 
-  def update
+  def self.all
+    @@words.values
 
   end
 
 
-  def delete
+  def self.clear
+    @@words = {}
+    @@total_rows = 0
 
   end
 
-  def edit
-
+  def save
+    @@words[self.id] = Word.new(self.word, self.id)
   end
-
 end
+#
+#   def delete
+#     @@words.delete(self.id)
+#   end
+#
+#   def update
+#     self.word = word
+#     @@words[self.id] = Word.new(self.word, self.id)
+#   end
+#
+#   def self.query_by_name(word)
+#     @@words.values.select { |user_word| /#{word}/i.match? user_word.word }
+#
+#   end
+#
+# end
