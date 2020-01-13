@@ -68,15 +68,8 @@ describe '#Word' do
     end
   end
 
-  describe('.query_name') do
-    it "querys for a word by name only" do
-      word = Word.new("Share", nil)
-      word.save()
-      word2 = Word.new("Share", nil)
-      word2.save()
-      expect(Word.query_name).to(eq([word]))
-    end
-  end
+
+
 
 
 
