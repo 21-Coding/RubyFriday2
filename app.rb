@@ -6,7 +6,7 @@ also_reload('lib/**/*.rb')
 
 
 get('/') do
-   @word = Word.all
+   @words = Word.all
    erb(:words)
 end
 
@@ -19,7 +19,7 @@ get('/words/new') do
 end
 
 post('/words') do
-  name = params[:word_name]
+  word_name = params[:word_name]
   word = Word.new(name, nil)
   word.save()
   @words = Word.all()
