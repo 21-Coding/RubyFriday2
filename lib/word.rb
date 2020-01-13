@@ -57,10 +57,8 @@ def update(word)
   self.word = word
   @@words[self.id] = Word.new(self.word, self.id)
 end
-end
 
 
-def self.query_name(word)
-  @@words.values.select { |user_word| /#{word}/i.match? user_word.word }
+
 
 end
