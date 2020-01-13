@@ -20,12 +20,16 @@ class Definition
     @@definitions[self.id] = Definition.new(self.text, self.id, self.word_id)
   end
 
-
-
-
   def self.clear
     @@definitions = {}
     @@total_rows = 0
 
   end
+
+  def ==(matching_definition)
+    (self.text() == matching_definition.text()) && (self.word_id() == matching_definition.word_id())
+  end
+
+
+
 end
