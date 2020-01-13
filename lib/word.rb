@@ -54,12 +54,12 @@ class Word
   end
 end
 
+def update
+  self.word = word
+  @@words[self.id] = Word.new(self.word, self.id)
+end
 
-#   def update
-#     self.word = word
-#     @@words[self.id] = Word.new(self.word, self.id)
-#   end
-#
+
 #   def self.query_by_name(word)
 #     @@words.values.select { |user_word| /#{word}/i.match? user_word.word }
 #
