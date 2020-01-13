@@ -21,4 +21,12 @@ describe '#Definition' do
       expect(Definition.all).to(eq([]))
     end
   end
+
+  describe('#==') do
+    it "is the same definition if attributes are matching another definition" do
+      definition = Definition.new("Share", nil, nil)
+      definition2 = Definition.new("Share", nil, nil)
+      expect(definition).to(eq(definition2))
+    end
+  end
 end
