@@ -16,6 +16,11 @@ class Definition
     @@definitions.values
   end
 
+  def save
+    @@definitions[self.id] = Definition.new(self.text, self.id, self.word_id)
+  end
+
+
 
 
   def self.clear
