@@ -44,9 +44,22 @@ describe '#Word' do
       word.save()
       word2 = Word.new("Share", nil)
       word2.save()
-      expect(word.all).to(eq([word,word2]))
+      expect(Word.all).to(eq([word,word2]))
     end
   end
+
+  describe('.delete') do
+    it "deletes a word" do
+      word = Word.new("Share", nil)
+      word.save()
+      word2 = Word.new("Share", nil)
+      word2.save()
+      word.delete()
+      expect(Word.all).to(eq([word2]))
+    end
+  end
+
+
 
 
 
