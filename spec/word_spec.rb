@@ -21,8 +21,6 @@ describe '#Word' do
     end
   end
 
-
-
   describe('.clear') do
     it("clears all words from list.") do
       word = Word.new("Share", nil)
@@ -39,6 +37,17 @@ describe '#Word' do
       expect(Word.find_word(word.id)).to(eq(word))
     end
   end
+
+  describe('.save') do
+    it "saves a word" do
+      word = Word.new("Share", nil)
+      word.save()
+      word2 = Word.new("Share", nil)
+      word2.save()
+      expect(word.all).to(eq([word,word2]))
+    end
+  end
+
 
 
 end
