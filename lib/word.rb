@@ -60,9 +60,7 @@ end
 end
 
 
-#   def self.query_by_name(word)
-#     @@words.values.select { |user_word| /#{word}/i.match? user_word.word }
-#
-#   end
-#
-# end
+def self.query_name(word)
+  @@words.values.select { |user_word| /#{word}/i.match? user_word.word }
+
+end
