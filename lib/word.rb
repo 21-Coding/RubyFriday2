@@ -52,11 +52,11 @@ class Word
   def delete
     @@words.delete(self.id)
   end
-end
 
 def update
   self.word = word
   @@words[self.id] = Word.new(self.word, self.id)
+end
 end
 
 
