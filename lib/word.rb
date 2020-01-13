@@ -48,12 +48,13 @@ class Word
   def save
     @@words[self.id] = Word.new(self.word, self.id)
   end
+
+  def delete
+    @@words.delete(self.id)
+  end
 end
-#
-#   def delete
-#     @@words.delete(self.id)
-#   end
-#
+
+
 #   def update
 #     self.word = word
 #     @@words[self.id] = Word.new(self.word, self.id)
