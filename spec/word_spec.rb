@@ -48,7 +48,7 @@ describe '#Word' do
     end
   end
 
-  describe('.delete') do
+  describe('#delete') do
     it "deletes a word" do
       word = Word.new("Share", nil)
       word.save()
@@ -59,12 +59,12 @@ describe '#Word' do
     end
   end
 
-  describe('.update') do
+  describe('#update') do
     it "updates a word by id" do
       word = Word.new("Share", nil)
       word.save()
       word.update("Hello")
-      expect(word.word).to(eq([word]))
+      expect(word.word).to(eq("Hello"))
     end
   end
 
