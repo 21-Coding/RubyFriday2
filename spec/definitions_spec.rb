@@ -13,6 +13,15 @@ describe '#Definition' do
     end
   end
 
+  describe('.save') do
+    it "saves a definition" do
+      definition = Definition.new("Share", 1, nil)
+      definition.save()
+      expect(Definition.all).to(eq([definition]))
+    end
+  end
+
+
   describe('.clear') do
     it("clears all definitions from list.") do
       definition = Definition.new("Share", nil, nil)
