@@ -57,4 +57,16 @@ describe '#Definition' do
       expect(Definition.all).to(eq([definition]))
     end
   end
+
+  describe('.find') do
+    it "finds a definition by id" do
+      definition = Definition.new("Share(v): have a portion of (something) with another or others.", 1, nil)
+      definition.save()
+      definition2 = Definition.new("Share(v): have a portion of (something) with another or others.", 1, nil)
+      definition2.save()
+      expect(Definition.find(definition.id)).to(eq(definition))
+    end
+  end
+
+
 end
