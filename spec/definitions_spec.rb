@@ -29,4 +29,14 @@ describe '#Definition' do
       expect(definition).to(eq(definition2))
     end
   end
+  describe('#delete') do
+    it "deletes a definition" do
+      definition = Definition.new("Share(v): have a portion of (something) with another or others.", nil, nil)
+      definition.save()
+      definition = Definition.new("Share(v): have a portion of (something) with another or others.", 1, nil)
+      definition.save()
+      definition.delete()
+      expect(Definition.all).to(eq([definition]))
+    end
+  end
 end
