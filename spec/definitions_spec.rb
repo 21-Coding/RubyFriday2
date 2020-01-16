@@ -1,5 +1,6 @@
 require('rspec')
-require('definition.rb')
+require('definition')
+require('word')
 
 describe '#Definition' do
 
