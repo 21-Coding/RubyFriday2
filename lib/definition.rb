@@ -30,6 +30,10 @@ class Definition
     (self.text() == matching_definition.text()) && (self.word_id() == matching_definition.word_id())
   end
 
+  def delete
+    @@definitions.delete(self.id)
+
+  end
 
 
 end
