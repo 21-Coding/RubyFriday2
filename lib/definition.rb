@@ -41,6 +41,11 @@ class Definition
     @@definitions[self.id] = Definition.new(self.text, self.word_id, self.id)
   end
 
+  def self.find(id)
+    @@definitions[id]
+
+  end
+
 
 
 end
