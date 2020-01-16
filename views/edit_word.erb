@@ -1,14 +1,17 @@
-<h2>Update <%= @word.word() %></h2>
+
+<h2>Edit: <%= @word.word() %></h2>
 <form action="/words/<%= @word.id() %>" method="post">
+  <input type="hidden" name="_method" value="patch">
 
-
+  <label>Updated Word
+    <input id="word_name"type="text" name="word_name">
+  </label>
+  <button type="submit">Update</button>
 </form>
 
-<form class="" action="index.html" method="post">
+<form class="" action="/words/<%= @word.id() %>" method="post">
+  <input type="hidden" name="_method" value="delete">
 
+  <button type="submit"></button>
 </form>
-
-
-<form class="" action="index.html" method="post">
-
-</form>
+<p><a href="/words">back to words</a></p>

@@ -1,0 +1,18 @@
+
+<h1>Word: <%= @definition.word.word %></h1>
+<h2>Definition: <%= @definition.text %> </h2>
+
+<form action= "/words/<%= @definition.text.id %>/definitions/<%= @definition.id %>" method="post">
+  <input type="hidden" value="patch">
+<p>Update Definition: </p>
+<input id="name" name="name" type="text" value="">
+  <button type="submit" class="">Update</button>
+</form>
+
+<form action= "/words/<%= @definition.text.id %>/definitions/<%= @definition.id %>" method="post">
+  <input type="hidden" value="delete">
+
+  <button type="submit" class="">Delete</button>
+</form>
+
+<a href="/words/<%= @definition.text.id %>">Return to <%= @definition.word.text %></a>

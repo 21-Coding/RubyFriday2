@@ -1,4 +1,13 @@
-
-<h2>Words are fun! Especially when you make your own!</h2>
-
 <h2>Here is your words!: </h2>
+
+<% if @words.any? %>
+<ul>
+  <% @words.each do |word| %>
+  <li><a href="/words/<%= word.id %>"><%= word.word%></a></li>
+  <% end %>
+</ul>
+<% else %>
+<p>Sorry, please add a word.</p>
+<% end %>
+
+<a href="/words/new">Add New Word</a>
