@@ -31,11 +31,11 @@ describe '#Word' do
     end
   end
 
-  describe('.find_word') do
+  describe('.find') do
     it("finds a word within the list.") do
       word = Word.new("Share", nil)
       word.save()
-      expect(Word.find_word(word.id)).to(eq(word))
+      expect(Word.find(word.id)).to(eq(word))
     end
   end
 
