@@ -46,6 +46,17 @@ class Definition
 
   end
 
+  def self.find_by_word(id)
+    definitions = []
+    @@definitions.values.each do |definition|
+      if definition.id == id
+        definitions.push(definition)
+      end
+    end
+  end
+
+
+
 
 
 end
