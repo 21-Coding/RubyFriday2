@@ -69,5 +69,13 @@ describe '#Definition' do
     end
   end
 
+  describe('.find_by_word') do
+    it "finds a definition by its word" do
+      definition = Definition.new("Share(v): have a portion of (something) with another or others.", 1, nil)
+      definition.save()
+
+    end
+  end
+
 
 end
