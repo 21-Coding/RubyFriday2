@@ -38,7 +38,7 @@ class Word
 
 
 
-  def self.find_word(id)
+  def self.find(id)
     @@words[id]
 
   end
